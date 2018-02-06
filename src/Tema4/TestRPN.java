@@ -1,7 +1,8 @@
 package Tema4;
-
 import java.util.Scanner;
-public class TestRPN {
+import junit.framework.TestCase;
+
+public class TestRPN extends TestCase{
 	/* 
 metodo
 main
@@ -16,8 +17,12 @@ main
 				break;
 			} 
 			else{
-				RPN calc=new RPN(linea);
-				System.out.printf("El resultado es %f\n",calc.resultado( ));}
+				RPN calc=new RPN(linea);				
+				System.out.printf("El resultado es %f\n",calc.resultado( ));
+				//RPN calc1 = new RPN (linea);
+				//assertEquals(25,000000,calc.resultado( )); 
+			
+			}				
 		} 
 	}
 }

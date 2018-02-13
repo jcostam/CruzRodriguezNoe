@@ -1,7 +1,15 @@
 package Tema4;
 
-public	class	RPN {
+class NodoPila {
+	public NodoPila(double dato	, NodoPila	abajo) {
+		this.dato =	dato;
+		this.abajo = abajo;
+	}
+	public NodoPila	abajo;
+	public double dato;
+}
 
+public	class	RPN {
 	private	String	commando;
 	private	NodoPila arriba;
 
@@ -30,8 +38,8 @@ public	class	RPN {
 				double numero;
 				// obtener	un string a	partir	del		numero
 				String temp	="";
-				for(int j= 0; (j< 100) && (Character.isDigit(commando.charAt(i)) || (commando.charAt(i) =='.'));j++,i++) {
-					temp = 	temp + String.valueOf(commando.charAt(i));
+				for(int j= 0; j< 100 && (Character.isDigit(commando.charAt(i)) || commando.charAt(i) =='.');j++,i++) {
+					temp = 	temp + commando.charAt(i);
 				}
 				// 	convertir	a double y	añadir a	la	pila	
 				numero	= Double.parseDouble(temp);
@@ -75,14 +83,4 @@ public	class	RPN {
 		}
 		return	val;
 	}
-
-}
-
-class NodoPila {
-	public NodoPila(double dato	, NodoPila	abajo) {
-		this.dato =	dato;
-		this.abajo = abajo;
-	}
-	public NodoPila	abajo;
-	public double dato;
 }

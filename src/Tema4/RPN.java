@@ -26,15 +26,15 @@ public	class	RPN {
 		for(int	i= 0;i<	commando.length( );	i++) {
 			//si	es	un	digito
 			if(Character.isDigit(commando.charAt(i))) {
-				double numero;
+				//double numero;
 				// obtener	un string a	partir	del		numero
 				String temp	="";
 				for(int j= 0; j< 100 && (Character.isDigit(commando.charAt(i)) || commando.charAt(i) =='.');j++,i++) {
 					temp = 	temp + commando.charAt(i);
 				}
 				// 	convertir	a double y	añadir a	la	pila	
-				numero	= Double.parseDouble(temp);
-				pushPila(numero);
+				//numero	= Double.parseDouble(temp);
+				pushPila(Double.parseDouble(temp));
 			} 
 			else if	(commando.charAt(i) ==	'+'	) {
 				b= popPila( );

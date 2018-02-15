@@ -1,5 +1,6 @@
 package Tema4;
 
+import junit.framework.Assert;
 import junit.framework.TestCase;
 
 public class TestRPN extends TestCase{
@@ -19,6 +20,7 @@ public class TestRPN extends TestCase{
 		assertEquals(5.0, divi.resultado( ));
 		assertEquals(1.0, mod.resultado( ));
 		
+		Assert.assertNotSame(17.0, 20);
 	}
 		
 }

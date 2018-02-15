@@ -20,7 +20,11 @@ public class TestRPN extends TestCase{
 		assertEquals(5.0, divi.resultado( ));
 		assertEquals(1.0, mod.resultado( ));
 		
-		Assert.assertNotSame(17.0, 20);
+		Assert.assertNotSame(suma.resultado( ), 99);
+		Assert.assertNotSame(resta.resultado( ), 99);
+		Assert.assertNotSame(multi.resultado( ), 99);
+		Assert.assertNotSame(divi.resultado( ), 99);
+		Assert.assertNotSame(mod.resultado( ), 99);
 	}
 		
 }

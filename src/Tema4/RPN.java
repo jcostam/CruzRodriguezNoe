@@ -10,8 +10,8 @@ public	class	RPN {
 	}
 
 	public	void	pushPila(double	nuevo_dato) {
-		NodoPila 	nuevo_nodo =new	NodoPila(nuevo_dato,arriba);
-		arriba	=	nuevo_nodo;
+		//NodoPila 	nuevo_nodo = {eliminamos esta variable por que solo la usaremos para pasarsela al valor de arriba
+		arriba	=	new	NodoPila(nuevo_dato,arriba);
 	}
 
 	public	double	popPila( ) {

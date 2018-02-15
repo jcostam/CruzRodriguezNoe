@@ -2,6 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Noe/Google Drive/Programacion/JAVA/Jar externos/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="/home/INFORMATICA/alu20468585b/Escriptori/Programacion/Jar Externos/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/home/INFORMATICA/alu20468585b/Escriptori/Programacion/Jar Externos/jd-eclipse-site-1.0.0-RC2.zip"/>
+	<classpathentry kind="lib" path="/home/INFORMATICA/alu20468585b/Escriptori/Programacion/Jar Externos/junit-4.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

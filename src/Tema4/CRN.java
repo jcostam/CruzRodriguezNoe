@@ -1,17 +1,18 @@
 package Tema4;
-public	class	RPN {
+public	class	CRN {
 	private	String	commando;
 	private	NodoPila arriba;
+	private double val;
 	/**
 	 * Metodo constructor de la clase RPN.
 	 * @param commando recoge un String pasado como parametro
 	 */
-	public RPN(String commando) {
+	public CRN(String commando) {
 		arriba	=	null;
 		this.commando=	commando;
 	}
 	/**
-	 * Metodo que ordena los datos recogidos para poder realizar el calculo.
+	 * Este metodo ordena los numeros obtenidos a patir del String para pasarlos a la clase NodoPila y ser calculados
 	 * @return dato_arriba
 	 */
 	public	double	popPila( ) {
@@ -51,7 +52,7 @@ public	class	RPN {
 				throw	new	IllegalArgumentException( );
 			}
 		}
-		double	val	= popPila( );
+		val = popPila( );
 		if(arriba!=	null) {	
 			throw	new	IllegalArgumentException( );
 		}

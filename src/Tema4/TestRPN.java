@@ -3,12 +3,12 @@ import junit.framework.TestCase;
 import junit.framework.Assert;
 public class TestRPN extends TestCase{
 	
-	private RPN suma = new RPN("5 5 + 7 +");
-	private RPN resta = new RPN("3 15 -");
-	private RPN multi = new RPN("5 5 * 10 *");
-	private RPN divi = new RPN("10 250 /");
-	private RPN mod = new RPN("2 25 %");
-	private RPN pow = new RPN("5 5 ^");
+	private CRN suma = new CRN("5 5 + 7 +");
+	private CRN resta = new CRN("3 15 -");
+	private CRN multi = new CRN("5 5 * 10 *");
+	private CRN divi = new CRN("10 250 /");
+	private CRN mod = new CRN("2 25 %");
+	private CRN pow = new CRN("5 5 ^");
  		
 	
 	public void test() {

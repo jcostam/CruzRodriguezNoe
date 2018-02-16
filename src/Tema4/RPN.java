@@ -3,7 +3,7 @@ public	class	RPN {
 	private	String	commando;
 	private	NodoPila arriba;
 	/**
-	 * Metodo constructor de la clase RPN
+	 * Metodo constructor de la clase RPN.
 	 * @param commando recoge un String pasado como parametro
 	 */
 	public RPN(String commando) {
@@ -11,7 +11,7 @@ public	class	RPN {
 		this.commando=	commando;
 	}
 	/**
-	 * Metodo que ordena los datos recogidos para poder realizar el calculo
+	 * Metodo que ordena los datos recogidos para poder realizar el calculo.
 	 * @return dato_arriba
 	 */
 	public	double	popPila( ) {
@@ -20,8 +20,8 @@ public	class	RPN {
 		return	dato_arriba;
 	}
 	/**
-	 * metodo que extrae de un string los numeros y el char para efectuar el calculo segun sea el char
-	 * @return val -> resultado de la operacion
+	 * metodo que extrae de un string los numeros y el char para efectuar el calculo segun sea el char.
+	 * @return val resultado de la operacion
 	 */
 	public	double	resultado() {		
 		for(int	i= 0;i<	commando.length( );	i++) {
@@ -33,19 +33,19 @@ public	class	RPN {
 					temp = 	temp + commando.charAt(i);
 				}
 				// 	convertir	a double y	añadir a	la	pila	
-			arriba = new NodoPila(Double.parseDouble(temp),arriba);				
+			arriba = NodoPila.createNodoPila(Double.parseDouble(temp), arriba);				
 			}else if	(commando.charAt(i) ==	'+'	) {				
-				arriba = new NodoPila(popPila( )+popPila( ),arriba);
+				arriba = NodoPila.createNodoPila(popPila( )+popPila( ), arriba);
 			}else if(commando.charAt(i) =='-') {
-				arriba = new NodoPila(popPila( )-popPila( ),arriba);				
+				arriba = NodoPila.createNodoPila(popPila( )-popPila( ), arriba);				
 			}else if(commando.charAt(i) =='*') {
-				arriba = new NodoPila(popPila( )*popPila( ),arriba);
+				arriba = NodoPila.createNodoPila(popPila( )*popPila( ), arriba);
 			}else if (commando.charAt(i) =='/') {
-				arriba = new NodoPila(popPila( )/popPila( ),arriba);
+				arriba = NodoPila.createNodoPila(popPila( )/popPila( ), arriba);
 			}else if(commando.charAt(i) =='^') {			
-				arriba = new NodoPila(Math.pow(popPila( ),popPila( )),arriba);
+				arriba = NodoPila.createNodoPila(Math.pow(popPila( ),popPila( )), arriba);
 			}else if (commando.charAt(i) =='%') {
-				arriba = new NodoPila(popPila( )%popPila( ),arriba);			
+				arriba = NodoPila.createNodoPila(popPila( )%popPila( ), arriba);			
 			} 
 			else if(commando.charAt(i) !=' ') {
 				throw	new	IllegalArgumentException( );

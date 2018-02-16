@@ -1,7 +1,10 @@
 package Tema4;
 
 class NodoPila {
-	public NodoPila(double dato	, NodoPila	abajo) {
+	public static NodoPila createNodoPila(double dato, NodoPila abajo) {
+		return new NodoPila(dato, abajo);
+	}
+	private NodoPila(double dato	, NodoPila	abajo) {
 		this.dato =	dato;
 		this.abajo = abajo;
 	}
